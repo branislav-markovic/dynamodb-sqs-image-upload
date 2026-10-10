@@ -1,0 +1,1 @@
+# dynamodb-sqs-image-upload
