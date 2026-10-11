@@ -1,9 +1,9 @@
-import buildApp from "./app.js";
+import buildApp from "./app.ts";
 
 const app = buildApp();
 
 const address = await app.listen({
-  port: process.env.SERVER_PORT,
+  port: Number(process.env.PORT) || 3000,
   host: '0.0.0.0',
 })
 

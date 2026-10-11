@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import buildApp from "./../../app.js";
+import buildApp from "./../../app.ts";
 
 test("POST /upload-image returns 200 and success message", async () => {
   const app = buildApp();

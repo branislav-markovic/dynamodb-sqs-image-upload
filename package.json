@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node --test",
-    "server": "node --env-file=.env index.js"
+    "test": "tsx --test",
+    "server": "tsx --env-file=.env index.ts"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,10 @@
     "@aws-sdk/client-sqs": "^3.1149.0",
     "@aws-sdk/lib-dynamodb": "^3.1149.0",
     "fastify": "^5.12.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
   }
 }
