@@ -1,12 +1,8 @@
-import Fastify from "fastify";
+import buildApp from "./app.js";
 
-const fastify = Fastify();
+const app = buildApp();
 
-fastify.post('/upload-image', async (request, reply) => {
-  return { message: "Upload endpoint ready" }
-})
-
-const address = await fastify.listen({
+const address = await app.listen({
   port: process.env.SERVER_PORT,
   host: '0.0.0.0',
 })
