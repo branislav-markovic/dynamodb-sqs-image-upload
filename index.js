@@ -1,10 +1,14 @@
-import http from 'node:http';
+import Fastify from "fastify";
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello, World!');
-});
+const fastify = Fastify();
 
-server.listen(process.env.SERVER_PORT, () => {
-  console.log(`Server running on http://localhost:${process.env.SERVER_PORT}`);
-});
+fastify.post('/upload-image', async (request, reply) => {
+  return { message: "Upload endpoint ready" }
+})
+
+const address = await fastify.listen({
+  port: process.env.SERVER_PORT,
+  host: '0.0.0.0',
+})
+
+console.log(`Server listening on ${address}`);
