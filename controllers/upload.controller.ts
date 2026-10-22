@@ -1,5 +1,4 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { error } from "node:console";
 
 export async function handleUploadImage(
   request: FastifyRequest,
