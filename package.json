@@ -5,7 +5,7 @@
   "main": "index.ts",
   "type": "module",
   "scripts": {
-    "test": "tsx --test",
+    "test": "tsx --test tests/**/*.test.ts",
     "server": "tsx --env-file=.env index.ts",
     "lint": "biome check .",
     "format": "biome check --write ."
@@ -17,6 +17,7 @@
     "@aws-sdk/client-s3": "^3.1149.0",
     "@aws-sdk/client-sqs": "^3.1149.0",
     "@aws-sdk/lib-dynamodb": "^3.1149.0",
+    "@fastify/multipart": "^10.1.6",
     "fastify": "^5.12.5"
   },
   "devDependencies": {
